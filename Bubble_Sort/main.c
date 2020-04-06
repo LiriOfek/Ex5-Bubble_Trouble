@@ -6,6 +6,7 @@ Purpose: This file sort given array, with given size
 
 #include <stdio.h>
 
+#define SIZE_OF_ARRAY (10)
 #define INITIAL_INDEX (0)
 #define INITIAL_NUMBER (1)
 
@@ -47,4 +48,45 @@ void bubble_sort(int array[], int size_of_array)
 			}
 		}
 	}
+}
+
+void main()
+{
+	/********************************************************\
+	* Function name - main
+	*
+	* Function Purpose - print the elements of given array
+	*					 call function that sort the array
+	*					 print the sorted array
+	*
+	* Parameters - no Input/Output parameters
+	*
+	* Return Value - there isn't return value
+	*
+	* Side Effects - the given array changed to be sorted
+	*
+	* Semantics - print the elements of given array
+	*			  call function that sort the array
+	*			   print the sorted array
+	*
+	* Author - Liri
+	\********************************************************/
+	int array[SIZE_OF_ARRAY] = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+	int index = INITIAL_INDEX;
+
+	printf("The initial array:\n");
+	for (index = INITIAL_INDEX; index < SIZE_OF_ARRAY; ++index)
+	{
+		printf("%d ", array[index]);
+	}
+
+	/*sort the array*/
+	bubble_sort(array, SIZE_OF_ARRAY);
+
+	printf("\nThe sorted array:\n");
+	for (index = INITIAL_INDEX; index < SIZE_OF_ARRAY; ++index)
+	{
+		printf("%d ", array[index]);
+	}
+	printf("\n");
 }
